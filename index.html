@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cold2Close | AI-Powered Cold Calling Solution</title>
+    <!-- Vapi AI Widget Script -->
+    <script
+      src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+      async
+      type="text/javascript"
+    ></script>
     <style>
         /* Global Styles */
         :root {
@@ -748,6 +754,58 @@
             color: #adb5bd;
             font-size: 0.9rem;
         }
+
+        /* Vapi AI Widget Styles - Compact version */
+        vapi-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Custom widget controls */
+        .widget-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .widget-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--accent-orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+            font-size: 24px;
+            border: none;
+        }
+
+        .widget-toggle:hover {
+            transform: scale(1.1);
+            background-color: var(--accent-warm);
+        }
+
+        /* Button container for pricing section */
+        .button-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
         
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -824,15 +882,23 @@
             .logo-container {
                 margin-left: 10px; /* Added margin for mobile */
             }
-        }
-
-        /* Button container for pricing section */
-        .button-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            
+            /* Adjust Vapi widget position on mobile */
+            vapi-widget {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .widget-controls {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .widget-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -1223,6 +1289,21 @@
         </div>
     </footer>
 
+    <!-- Custom Widget Controls -->
+    <div class="widget-controls">
+        <button class="widget-toggle" id="widgetToggle">💬</button>
+    </div>
+
+    <!-- Vapi AI Widget - Compact Version -->
+    <vapi-widget 
+      assistant-id="b6154320-6583-40c4-84fd-aaa5499d2207" 
+      public-key="5764d42b-c0ab-4e6c-98e8-a50b7d0f62af"
+      size="compact"
+      position="bottom-right"
+      border-radius="small"
+      id="vapiWidget">
+    </vapi-widget>
+
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
@@ -1283,6 +1364,35 @@
             if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target) && navMenu.classList.contains('show')) {
                 navMenu.classList.remove('show');
             }
+        });
+
+        // Vapi Widget Controls
+        const widget = document.getElementById('vapiWidget');
+        const toggleButton = document.getElementById('widgetToggle');
+        let isWidgetVisible = false;
+
+        // Toggle widget visibility
+        toggleButton.addEventListener('click', function() {
+            if (isWidgetVisible) {
+                widget.style.transform = 'translateX(400px)';
+                widget.style.opacity = '0';
+                toggleButton.textContent = '💬';
+                isWidgetVisible = false;
+            } else {
+                widget.style.transform = 'translateX(0)';
+                widget.style.opacity = '1';
+                toggleButton.textContent = '✕';
+                isWidgetVisible = true;
+            }
+        });
+
+        // Initialize widget controls after page loads
+        window.addEventListener('load', function() {
+            // Set initial widget state to hidden
+            widget.style.transform = 'translateX(400px)';
+            widget.style.opacity = '0';
+            toggleButton.textContent = '💬';
+            isWidgetVisible = false;
         });
     </script>
 </body>
