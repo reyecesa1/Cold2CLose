@@ -99,6 +99,15 @@
             background-color: var(--accent-orange);
             color: white;
         }
+
+        .btn-light {
+            background-color: var(--light-gray);
+            color: var(--primary-black);
+        }
+        
+        .btn-light:hover {
+            background-color: #e0e0e0;
+        }
         
         /* Header Styles */
         header {
@@ -784,6 +793,7 @@
             
             .mobile-menu {
                 display: flex;
+                margin-right: 15px; /* Added margin for mobile */
             }
             
             .hero-btns {
@@ -810,6 +820,24 @@
             .hero {
                 padding: 130px 0 60px;
             }
+            
+            /* Mobile adjustments for logo and hamburger */
+            .header-container {
+                padding: 15px 15px; /* Added more padding on mobile */
+            }
+            
+            .logo-container {
+                margin-left: 10px; /* Added margin for mobile */
+            }
+        }
+
+        /* Button container for pricing section */
+        .button-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -888,6 +916,10 @@
                             <div class="option-card" data-option="build-me">
                                 <h4>Build Me Plan</h4>
                                 <p>Custom workflow development</p>
+                            </div>
+                            <div class="option-card" data-option="book-demo">
+                                <h4>Book Demo</h4>
+                                <p>Schedule a personalized demo</p>
                             </div>
                             <div class="option-card" data-option="custom">
                                 <h4>Custom Solution</h4>
@@ -1084,7 +1116,10 @@
             </div>
             <div style="text-align: center; margin-top: 40px;">
                 <p><strong>Need a custom solution? We build tailored workflows for any business type.</strong></p>
-                <a href="#contact" class="btn btn-secondary">Request Custom Quote</a>
+                <div class="button-container">
+                    <a href="#contact" class="btn btn-secondary">Request Custom Quote</a>
+                    <a href="#contact" class="btn btn-light">Book Demo</a>
+                </div>
             </div>
         </div>
     </section>
