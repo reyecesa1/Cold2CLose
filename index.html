@@ -900,6 +900,74 @@
             margin-left: auto;
         }
         
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0 50px;
+            background-color: white;
+            display: none;
+        }
+        
+        .faq-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-content h1 {
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .faq-question {
+            padding: 1rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question:hover {
+            color: var(--accent-orange);
+        }
+        
+        .faq-answer {
+            padding: 0 0 1rem 0;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-toggle.active {
+            transform: rotate(45deg);
+        }
+        
+        .faq-contact {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--accent-orange);
+            border-radius: 0 10px 10px 0;
+            text-align: center;
+        }
+        
         /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
@@ -1009,6 +1077,10 @@
                 width: 100%;
                 text-align: center;
                 margin-top: 1rem;
+            }
+
+            .faq-content {
+                padding: 1rem;
             }
         }
 
@@ -1433,7 +1505,7 @@
                     </div>
                     
                     <div class="legal-note">
-                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us through our contact form and we'll be happy to share them with you.</p>
+                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us at <strong>info@cold2close.net</strong> and we'll be happy to share them with you.</p>
                     </div>
                     
                     <h2>Introduction</h2>
@@ -1494,7 +1566,7 @@
                     <p>We may update this Privacy Policy from time to time. When we do, we will change the "Last Updated" date and post the new policy on our site.</p>
                     
                     <h2>Contact Us</h2>
-                    <p>For any questions or to exercise your privacy rights, please contact us through our contact form.</p>
+                    <p>For any questions or to exercise your privacy rights, please contact us at <strong>info@cold2close.net</strong>.</p>
                     
                     <a href="#" class="back-to-top">Back to Top</a>
                 </div>
@@ -1507,7 +1579,7 @@
                     </div>
                     
                     <div class="legal-note">
-                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us through our contact form and we'll be happy to share them with you.</p>
+                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us at <strong>info@cold2close.net</strong> and we'll be happy to share them with you.</p>
                     </div>
                     
                     <h2>1. Agreement to Terms</h2>
@@ -1552,7 +1624,7 @@
                     <p>Cold2Close reserves the right to modify these Terms at any time. Any changes will be effective immediately upon posting on our website.</p>
                     
                     <h2>11. Contact Information</h2>
-                    <p>For questions about these Terms or our services, please contact us through our contact form.</p>
+                    <p>For questions about these Terms or our services, please contact us at <strong>info@cold2close.net</strong>.</p>
                     
                     <a href="#" class="back-to-top">Back to Top</a>
                 </div>
@@ -1565,7 +1637,7 @@
                     </div>
                     
                     <div class="legal-note">
-                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us through our contact form and we'll be happy to share them with you.</p>
+                        <p><strong>Note:</strong> This document is a summarized version of our legal policies. For the complete documents, please contact us at <strong>info@cold2close.net</strong> and we'll be happy to share them with you.</p>
                     </div>
                     
                     <h2>1. What Are Cookies</h2>
@@ -1586,9 +1658,128 @@
                     <p>We may update this Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page.</p>
                     
                     <h2>5. Contact Us</h2>
-                    <p>If you have any questions about our use of cookies, please contact us through our contact form.</p>
+                    <p>If you have any questions about our use of cookies, please contact us at <strong>info@cold2close.net</strong>.</p>
                     
                     <a href="#" class="back-to-top">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="faq-content">
+                <!-- FAQ Navigation -->
+                <div class="legal-navigation">
+                    <h1>Frequently Asked Questions</h1>
+                    <a href="#" class="btn btn-outline back-to-home" id="back-to-home-faq">Back to Home</a>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is Cold2Close and how does it work?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cold2Close is an AI-powered cold calling solution that transforms your outbound sales process. We create custom workflows for any business where our AI makes calls, engages prospects in natural conversations, and generates qualified leads for your sales team.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I get started with Cold2Close?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Getting started is simple! Just fill out our Get Started form with your business details and requirements. Our team will contact you to discuss your specific needs and create a custom workflow tailored to your business.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What types of businesses can benefit from Cold2Close?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We work with businesses across various industries including real estate, SaaS, healthcare, financial services, marketing agencies, and more. Any business that relies on outbound calling can benefit from our AI-powered solution.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much does Cold2Close cost?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer several pricing tiers starting at $99/month for our Starter plan, $299/month for Professional, and $599/month for our Build Me plan. Each plan includes different features and call volumes. Custom solutions are also available.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I customize the AI calling scripts?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Our Professional and Build Me plans include custom scripting. We work closely with you to develop conversation flows that match your brand voice, target audience, and specific business objectives.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do you handle data privacy and security?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Data privacy and security are our top priorities. We implement industry-standard security measures, comply with relevant regulations, and never sell your data. For detailed information, please review our Privacy Policy.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What integrations do you offer?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer seamless integration with popular CRMs and marketing platforms. Our system can sync data with your existing tools to automate follow-up workflows and ensure smooth data transfer between systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do you measure success and ROI?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide detailed analytics on call performance, lead quality, conversion rates, and ROI. Our dashboard gives you insights into which conversations are most effective and how to optimize your campaigns for better results.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What kind of support do you provide?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All plans include email support, with priority support for Professional and Build Me plans. Our Build Me plan includes a dedicated account manager and 24/7 premium support to ensure your success.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I try the AI before committing?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a "Talk to AI" demo where you can experience a real conversation with our AI assistant. This gives you a firsthand look at how our technology works before making any commitment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-contact">
+                    <p><strong>Got any questions? Contact us! <a href="mailto:info@cold2close.net">info@cold2close.net</a></strong></p>
                 </div>
             </div>
         </div>
@@ -1615,6 +1806,7 @@
                 <div class="footer-col">
                     <h3>Resources</h3>
                     <ul>
+                        <li><a href="#faq" class="faq-link">FAQ</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
@@ -1702,7 +1894,7 @@
         const legalNavButtons = document.querySelectorAll('.legal-nav-btn');
         const legalSection = document.getElementById('legal');
         const backToHome = document.getElementById('back-to-home');
-        const mainSections = document.querySelectorAll('section:not(.legal-section)');
+        const mainSections = document.querySelectorAll('section:not(.legal-section):not(.faq-section)');
         const footer = document.querySelector('footer');
         const mainLogo = document.getElementById('logo');
         
@@ -1756,6 +1948,7 @@
         mainLogo.addEventListener('click', function(e) {
             e.preventDefault();
             hideLegalSection();
+            hideFaqSection();
         });
         
         // Function to show legal section
@@ -1765,6 +1958,7 @@
                 section.style.display = 'none';
             });
             footer.style.display = 'none';
+            document.getElementById('faq').style.display = 'none';
             
             // Show legal section
             legalSection.style.display = 'block';
@@ -1816,6 +2010,75 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo(0, 0);
+            });
+        });
+
+        // FAQ Section Functionality
+        const faqLink = document.querySelector('.faq-link');
+        const faqSection = document.getElementById('faq');
+        const backToHomeFaq = document.getElementById('back-to-home-faq');
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        // FAQ link click handler
+        faqLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showFaqSection();
+        });
+        
+        // Back to home from FAQ
+        backToHomeFaq.addEventListener('click', function(e) {
+            e.preventDefault();
+            hideFaqSection();
+        });
+        
+        // Function to show FAQ section
+        function showFaqSection() {
+            // Hide all main sections and footer
+            mainSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            footer.style.display = 'none';
+            legalSection.style.display = 'none';
+            
+            // Show FAQ section
+            faqSection.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Function to hide FAQ section
+        function hideFaqSection() {
+            // Hide FAQ section
+            faqSection.style.display = 'none';
+            
+            // Show all main sections and footer
+            mainSections.forEach(section => {
+                section.style.display = 'block';
+            });
+            footer.style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // FAQ accordion functionality
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    if (ans !== answer && ans.classList.contains('active')) {
+                        ans.classList.remove('active');
+                        ans.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
             });
         });
     </script>
